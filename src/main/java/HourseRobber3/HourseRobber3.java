@@ -41,47 +41,40 @@ import java.util.ArrayList;
  */
 
 public class HourseRobber3 {
-     public int rob(TreeNode root) {
-         int rootSum = sum(root,0);
-         TreeNode right = root.right;
-         TreeNode left = root.left;
-         int sonSum = sum(right,right.val)+sum(left,left.val);
-         return Math.max(rootSum,sonSum);
-     }
-    public int sum(TreeNode root,int sum){
-        ArrayList<TreeNode> nodes = getGroundSunNodes(root);
-        if(nodes.size() == 0){
-            return sum;
-        }else{
-            for(TreeNode node:nodes){
-                sum += node.val;
-                sum(node,sum);
-            }
-            return sum;
-        }
+    public static void main(String[] args){
+        HourseRobber3 hourseRobber3 = new HourseRobber3();
+        TreeNode root = new TreeNode(3);
+        TreeNode l1 = new TreeNode(2);
+        TreeNode r1 = new TreeNode(3);
+        TreeNode r2 = new TreeNode(3);
+        TreeNode r3 = new TreeNode(1);
+        l1.left = null;
+        l1.right = r2;
+        r1.left = null;
+        r1.right = r3;
+        root.left = l1;
+        root.right = r1;
+        System.out.println(hourseRobber3.rob(root));
     }
-     public ArrayList<TreeNode> getGroundSunNodes(TreeNode root){
-         ArrayList<TreeNode> nodes = new ArrayList<TreeNode>();
-         if(root != null){
-             TreeNode right = root.right;
-             TreeNode left = root.left;
-             if(right != null){
-                 if(right.right != null){
-                     nodes.add(right.right);
-                 }
-                 if(right.left != null){
-                     nodes.add(right.left);
-                 }
-             }
-             if(left != null){
-                 if(left.right != null){
-                     nodes.add(left.right);
-                 }
-                 if(left.left !=null){
-                     nodes.add(left.left);
-                 }
-             }
-         }
-         return nodes;
+     public int rob(TreeNode root) {
+         int child = 0, childchild = 0;
+         int[] childs = {child,childchild};
+         rob(root, childs);
+         return Math.max(childs[0], childs[1]);
      }
+    public void rob(TreeNode root,int[] childs){
+        if(root == null){
+            return;
+        }
+        int l1 = 0, l2 = 0, r1 = 0, r2 = 0;
+        int[] l = {l1,l2};
+        int[] r = {r1,r2};
+        rob(root.left,l);
+        rob(root.right,r);
+
+        //rob the node root
+        childs[0] = l[1] + r[1] + root.val;
+        //no rob the node root
+        childs[1] = Math.max(l[0], l[1]) + Math.max(r[0], r[1]);
+    }
 }
