@@ -52,6 +52,7 @@ public class PalindromPairs {
         i = 0;
         for(String word:words){
             if(word.length() <=1){
+                i++;
                 continue;
             }
             if(judgePal(word)){
@@ -192,6 +193,16 @@ public class PalindromPairs {
     }
     public static void  main(String[] args){
         PalindromPairs pa = new PalindromPairs();
-        System.out.println(pa.maxLeftPal("sssll"));
+//        System.out.println(pa.maxLeftPal("sssll"));
+        String[] pairs = {"abcd","dcba","lls","s","sssll"};
+//        String word = "s";
+//        for(int rightPal = word.length()-1;rightPal>0;rightPal--){
+//            if(pa.judgePal(word.substring(rightPal,word.length()))){
+//                String l = word.substring(0,rightPal);
+//                String revert = pa.revertString(l);
+//                System.out.println(revert);
+//            }
+//        }
+        pa.palindromePairs(pairs);
     }
 }
