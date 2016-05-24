@@ -51,7 +51,7 @@ public class PalindromPairs {
         }
         i = 0;
         for(String word:words){
-            if(word.length() <=1){
+            if(word.length() ==0){
                 i++;
                 continue;
             }
@@ -67,6 +67,10 @@ public class PalindromPairs {
                     l2.add(i);
                     results.add(l2);
                 }
+            }
+            if(word.length() == 1){
+                i++;
+                continue;
             }
             String revert = revertString(word);
             if(map.containsKey(revert)){
