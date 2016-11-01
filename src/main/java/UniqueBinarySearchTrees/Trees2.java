@@ -42,17 +42,22 @@ public class Trees2 {
 
     public List<TreeNode> genTree(int from,int to){
         List<TreeNode> treeNodeList = new ArrayList<TreeNode>();
+        if(from == to){
+            TreeNode treeNode = new TreeNode(from);
+            treeNodeList.add(treeNode);
+            return treeNodeList;
+        }
         for(int i=from;i<=to;i++){
             int leftFrom = from;
             int leftTo = i-1;
             List<TreeNode> leftNodes = new ArrayList<TreeNode>();
-            if(leftFrom < leftTo){
+            if(leftFrom <= leftTo){
                 leftNodes = genTree(leftFrom,leftTo);
             }
             int rightFrom = i+1;
             int rightTo = to;
             List<TreeNode> rightNodes = new ArrayList<TreeNode>();
-            if(rightFrom < rightTo){
+            if(rightFrom <= rightTo){
                 rightNodes = genTree(rightFrom,rightTo);
             }
             if(leftNodes.size() == 0 && rightNodes.size() == 0){
