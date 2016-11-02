@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 /**
  * Created by dengrong on 2016/10/31.
+ * Given an integer n, generate all structurally unique BST's (binary search trees) that store values 1...n.
  */
 public class Trees2 {
     public static void main(String[] args){
