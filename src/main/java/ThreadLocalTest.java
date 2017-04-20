@@ -5,8 +5,9 @@ import java.util.concurrent.Executors;
  * Created by dengrongguan on 2017/2/27.
  */
 public class ThreadLocalTest extends AbstractClassTest{
+    final static ThreadLocal<Boolean> threadLocal = new ThreadLocal<Boolean>();
     public static void main(String[] args){
-        final ThreadLocal<Boolean> threadLocal = new ThreadLocal<Boolean>();
+
         threadLocal.set(false);
         new Thread(new Runnable() {
             public void run() {

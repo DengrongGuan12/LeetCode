@@ -3,4 +3,5 @@
  */
 public interface InterfaceTest {
     static int a = 0;
+    public void test1();
 }
