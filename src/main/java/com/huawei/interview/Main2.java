@@ -35,7 +35,7 @@ public class Main2 {
             if(taskTimeMap.containsKey(i)){
                 int taskId = taskTimeMap.get(i);
                 Task task = taskIdMap.get(taskId);
-                if(task.leftTime > 0 && task.priority > nowPriority && task.id != nowId){
+                if(task.priority > nowPriority && task.id != nowId){
                     int time = i - nowTime;
                     stringBuffer.append(nowId+"."+time+"|");
                     if(taskIdMap.containsKey(nowId)){
