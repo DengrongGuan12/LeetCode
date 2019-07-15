@@ -1,4 +1,3 @@
-import com.google.code.externalsorting.ExternalSort;
 import org.junit.Test;
 
 import java.io.File;
