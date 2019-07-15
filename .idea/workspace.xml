@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05e70219-c735-4ed2-a130-9514ac71e989" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/LongestValidParenthese.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MaxSubArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/ExternalSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ExternalSortTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MaxSubArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MaxSubArray.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,13 +40,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="28" />
-          <entry key="java" value="7318" />
+          <entry key="java" value="7405" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7318" />
+          <entry key="JAVA" value="7405" />
           <entry key="PLAIN_TEXT" value="28" />
           <entry key="XML" value="1" />
         </counts>
@@ -82,8 +79,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/MaxSubArray.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            <state relative-caret-position="210">
+              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -177,7 +174,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563180888591" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563181375123" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -274,11 +271,11 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32889965" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.19588876" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.23458283" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.23458283" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32889965" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32889965" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.32889965" />
       <window_info anchor="bottom" id="Console" order="10" />
@@ -644,8 +641,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MaxSubArray.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        <state relative-caret-position="210">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
         </state>
       </provider>
     </entry>
