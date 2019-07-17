@@ -10,7 +10,7 @@ public class CombinationSum {
 
     List<List<Integer>> res = new ArrayList<List<Integer>>();
 
-    private void combinationSum(int[] candidate, int target, String tmp){
+    private void combinationSum(int[] candidate, int target, String tmp, int add){
         if (target == 0){
             String[] tmps = tmp.split(",");
             if (tmps.length > 0){
@@ -28,7 +28,8 @@ public class CombinationSum {
         }else{
             for (int c: candidate
                  ) {
-                combinationSum(candidate, target - c, tmp + "," + c);
+                if ()
+                combinationSum(candidate, target - c, tmp + "," + c, c);
             }
         }
     }
