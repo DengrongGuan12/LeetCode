@@ -1,43 +1,87 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Stack;
 
 public class CombinationSum {
 
+//    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+//        combinationSum(candidates, target, "", Integer.MIN_VALUE);
+//        return res;
+//    }
+//
+//    List<List<Integer>> res = new ArrayList<List<Integer>>();
+//
+//    private void combinationSum(int[] candidate, int target, String tmp, int add){
+//        if (target == 0){
+//            String[] tmps = tmp.split(",");
+//            if (tmps.length > 0){
+//                List<Integer> integers = new ArrayList<Integer>();
+//                for (String t:tmps) {
+//                    if (!t.equals("")){
+//                        integers.add(Integer.parseInt(t));
+//                    }
+//                }
+//                res.add(integers);
+//            }
+//            return;
+//        }else if (target < 0){
+//            return;
+//        }else{
+//            for (int c: candidate
+//                 ) {
+//                if (c >= add){
+//                    combinationSum(candidate, target - c, tmp + "," + c, c);
+//                }
+//            }
+//        }
+//    }
+
+    private List<List<Integer>> res = new ArrayList<List<Integer>>();
+    private int[] candidates;
+    private int len;
+
+    private void findCombinationSum(int residue, int start, Stack<Integer> pre) {
+        if (residue == 0) {
+            res.add(new ArrayList<Integer>(pre));
+            return;
+        }
+        // 优化添加的代码2：在循环的时候做判断，尽量避免系统栈的深度
+        // residue - candidates[i] 表示下一轮的剩余，如果下一轮的剩余都小于 0 ，就没有必要进行后面的循环了
+        // 这一点基于原始数组是排序数组的前提，因为如果计算后面的剩余，只会越来越小
+        for (int i = start; i < len && residue - candidates[i] >= 0; i++) {
+            pre.add(candidates[i]);
+            // 【关键】因为元素可以重复使用，这里递归传递下去的是 i 而不是 i + 1
+            findCombinationSum(residue - candidates[i], i, pre);
+            pre.pop();
+        }
+    }
+
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
-        combinationSum(candidates, target, "");
+        int len = candidates.length;
+        if (len == 0) {
+            return res;
+        }
+        // 优化添加的代码1：先对数组排序，可以提前终止判断
+        Arrays.sort(candidates);
+        this.len = len;
+        this.candidates = candidates;
+        findCombinationSum(target, 0, new Stack<Integer>());
         return res;
     }
 
-    List<List<Integer>> res = new ArrayList<List<Integer>>();
-
-    private void combinationSum(int[] candidate, int target, String tmp, int add){
-        if (target == 0){
-            String[] tmps = tmp.split(",");
-            if (tmps.length > 0){
-                List<Integer> integers = new ArrayList<Integer>();
-                for (String t:tmps) {
-                    if (!t.equals("")){
-                        integers.add(Integer.parseInt(t));
-                    }
-                }
-                res.add(integers);
-            }
-            return;
-        }else if (target < 0){
-            return;
-        }else{
-            for (int c: candidate
-                 ) {
-                if ()
-                combinationSum(candidate, target - c, tmp + "," + c, c);
-            }
-        }
-    }
+//    public static void main(String[] args) {
+//        int[] candidates = {2, 3, 6, 7};
+//        int target = 7;
+//        Solution solution = new Solution();
+//        List<List<Integer>> combinationSum = solution.combinationSum(candidates, target);
+//        System.out.println(combinationSum);
+//    }
 
     public static void main(String[] args) {
         CombinationSum combinationSum = new CombinationSum();
         combinationSum.combinationSum(new int[]{
-                2,3,6,7
-        }, 7);
+                2,3,5
+        }, 8);
     }
 }

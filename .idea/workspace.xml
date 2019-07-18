@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05e70219-c735-4ed2-a130-9514ac71e989" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/MaxSubArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MaxSubArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CombinationSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CombinationSum.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,14 +26,14 @@
         <counts>
           <entry key="class" value="1" />
           <entry key="gitignore" value="5" />
-          <entry key="java" value="34" />
+          <entry key="java" value="37" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="34" />
+          <entry key="JAVA" value="37" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="XML" value="1" />
         </counts>
@@ -40,13 +41,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="28" />
-          <entry key="java" value="7405" />
+          <entry key="java" value="8718" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7405" />
+          <entry key="JAVA" value="8718" />
           <entry key="PLAIN_TEXT" value="28" />
           <entry key="XML" value="1" />
         </counts>
@@ -76,11 +77,33 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/MaxSubArray.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+            <state relative-caret-position="165">
+              <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/SearchInReverseArray.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CombinationSum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="51" column="62" lean-forward="true" selection-start-line="51" selection-start-column="62" selection-end-line="51" selection-end-column="62" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1209#1224#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,6 +146,8 @@
         <option value="$PROJECT_DIR$/src/test/ExternalSortTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/LongestValidParenthese.java" />
         <option value="$PROJECT_DIR$/src/main/java/MaxSubArray.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SearchInReverseArray.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CombinationSum.java" />
       </list>
     </option>
   </component>
@@ -174,7 +199,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563181375123" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563444198199" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -189,16 +214,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MaxSubArray">
-    <configuration name="GenerateParenthesis" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GenerateParenthesis" />
-      <module name="LeetCode" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LetterCombinitions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="LetterCombinitions" />
+  <component name="RunManager" selected="Application.CombinationSum">
+    <configuration name="CombinationSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CombinationSum" />
       <module name="LeetCode" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -225,20 +243,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SearchInReverseArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SearchInReverseArray" />
+      <module name="LeetCode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.LetterCombinitions" />
-      <item itemvalue="Application.GenerateParenthesis" />
       <item itemvalue="Application.NextPermutation" />
       <item itemvalue="Application.LongestValidParenthese" />
       <item itemvalue="Application.MaxSubArray" />
+      <item itemvalue="Application.SearchInReverseArray" />
+      <item itemvalue="Application.CombinationSum" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CombinationSum" />
+        <item itemvalue="Application.SearchInReverseArray" />
         <item itemvalue="Application.MaxSubArray" />
         <item itemvalue="Application.LongestValidParenthese" />
         <item itemvalue="Application.NextPermutation" />
-        <item itemvalue="Application.GenerateParenthesis" />
-        <item itemvalue="Application.LetterCombinitions" />
       </list>
     </recent_temporary>
   </component>
@@ -271,11 +296,11 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32889965" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.19588876" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.23458283" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.23458283" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32889965" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32889965" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.32889965" />
       <window_info anchor="bottom" id="Console" order="10" />
@@ -380,6 +405,18 @@
           <line>3</line>
           <properties />
           <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/SearchInReverseArray.java</url>
+          <line>9</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/CombinationSum.java</url>
+          <line>9</line>
+          <properties />
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -641,8 +678,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MaxSubArray.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        <state relative-caret-position="165">
+          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SearchInReverseArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/Vector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="782" column="32" selection-start-line="782" selection-start-column="32" selection-end-line="782" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CombinationSum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="51" column="62" lean-forward="true" selection-start-line="51" selection-start-column="62" selection-end-line="51" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1209#1224#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
