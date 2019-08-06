@@ -1,55 +1,72 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MinWindow {
+
     public String minWindow(String s, String t){
-        int[] charCount = new int[128];
+        Map<Character, Integer> charCount = new HashMap<Character, Integer>();
+        Map<Character, Integer> tmpCharCount = new HashMap<Character, Integer>();
         for (int i = 0; i < t.length(); i++){
-            charCount[t.charAt(i)] ++;
+            charCount.put(t.charAt(i), charCount.getOrDefault(t.charAt(i), 0) + 1);
         }
         List<Integer> ids = new ArrayList<Integer>();
         for (int i = 0;i < s.length();i++){
-            if (charCount[s.charAt(i)] > 0){
+            if (charCount.containsKey(s.charAt(i))){
                 ids.add(i);
             }
         }
-        int minLen = Integer.MAX_VALUE;
+        int left = 0, right = 0;
         String res = "";
-        for (int k = 0; k < t.length() - 1; k++){
-            if (charCount[s.charAt(ids.get(k))] > 0){
-                charCount[s.charAt(ids.get(k))] --;
-            }
-        }
-        for (int i = 0;i <= ids.size() - t.length();i++){
-            int j = i + t.length() - 1;
-            while (j < ids.size()){
-                if (charCount[s.charAt(ids.get(j))] > 0){
-                    charCount[s.charAt(ids.get(j))]--;
-                }
-                if (sum(charCount) == 0){
-                    if (minLen > (ids.get(j) - ids.get(i))){
-                        minLen = ids.get(j) - ids.get(i);
-                        res = s.substring(ids.get(i), ids.get(j)+1);
-                    }
+        int minLen = Integer.MAX_VALUE;
+//        String tmp = "";
+        while (right < ids.size()){
+            while(right < ids.size()){
+//                tmpCharCount[s.charAt(ids.get(right))]++;
+                tmpCharCount.put(s.charAt(ids.get(right)), tmpCharCount.getOrDefault(s.charAt(ids.get(right)), 0)+1);
+//                tmp = s.substring(ids.get(left), ids.get(right) + 1);
+                if (contain(tmpCharCount, charCount)){
                     break;
                 }
-                j++;
-
+                right++;
             }
-            charCount[s.charAt(ids.get(i))] ++;
+            while(left <= right){
+//                tmp = s.substring(ids.get(left), ids.get(right) + 1);
+                if (contain(tmpCharCount,charCount)){
+                    String tmpRes = s.substring(ids.get(left), ids.get(right) + 1);
+                    if (tmpRes.length() < minLen){
+                        res = tmpRes;
+                        minLen = tmpRes.length();
+                    }
+                }else{
+                    break;
+                }
+//                tmpCharCount[s.charAt(ids.get(left))]--;
+                tmpCharCount.put(s.charAt(ids.get(left)), tmpCharCount.get(s.charAt(ids.get(left))) - 1);
+                left++;
+            }
+            right++;
         }
         return res;
     }
 
-    public int sum(int[] arr){
-        int sum = 0;
-        for (int s : arr){
-            sum+=s;
+    public boolean contain(Map<Character, Integer> map1,  Map<Character, Integer> map2){
+        // 判断map1 是否包含 map2
+        for (Character c: map2.keySet()){
+            if (map1.containsKey(c) && map1.get(c) >= map2.get(c)){
+                continue;
+            }
+            return false;
         }
-        return sum;
+
+        return true;
     }
     public static void main(String[] args) {
         MinWindow minWindow = new MinWindow();
-        System.out.print(minWindow.minWindow("ADOBECODEBANC", "ABC"));
+        System.out.println(minWindow.minWindow("ADOBECODEBANC", "ABC"));
+//        System.out.println(minWindow.minWindow("acbbaca", "aba")); //baca
+//        System.out.println(minWindow.minWindow("cabwefgewcwaefgcf", "cae"));
+//        System.out.println(minWindow.minWindow("a", "aa"));
     }
 }
